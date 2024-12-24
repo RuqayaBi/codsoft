@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+    <header>
+        <h1>Welcome</h1>
+        <p>Find your dream Jobs and got best opportunity.</p>
+    </header>
+    <main>
+        
+        <section id="job-search">
+            <h2>Job Openings</h2>
+            <div class="form-container">
+                <form action="search.php" method="GET">
+                    <label for="keywords">Keywords:</label>
+                    <input type="text" id="keywords" name="keywords" placeholder="e.g., Software Engineer">
+                    
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Remote, New York">
+                    
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <ul class="search-results">
+    
+            </ul>
+        </section>
+        <section id="post-job">
+            <h2>Post a Job</h2>
+            <div class="form-container">
+                <form action="post_job" method="POST">
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" name="job_title" placeholder="e.g., Backend Developer" required>
+                    
+                    <label for="company-name">Company Name:</label>
+                    <input type="text" id="company-name" name="company_name" required>
+                    
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Remote, New York" required>
+                    
+                    <label for="description">Job Description:</label>
+                    <textarea id="description" name="description" rows="5" required></textarea>
+                    
+                    <button type="submit">Post Job</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="job-listings">
+            <h2>Job Details</h2>
+            <ul class="job-listings">
+        
+                <li>
+                    <h2>Frontend Developer</h2>
+                    <p><strong>Company:</strong> Tech Corp</p>
+                    <p><strong>Location:</strong> Remote</p>
+                    <p><strong>Description:</strong> Build and maintain user interfaces for our web applications.</p>
+                    <button onclick="alert('Redirect to application page!')">Apply Now</button>
+                </li>
+                
+                 <li>
+                 <h2> Full Stack Developer</h2>
+                 <p><strong>Company:</strong>Warrior Tech</p>
+                 <p><strong>Location:</strong>Remote</p>
+                 <p><strong>Description: Design and Create website and application for various platforms </strong></p>
+                 <button onclick="alert('Redirect to application page!')">Apply Now</button>
+                 </li>
+    <li>
+        <h2> Software Engineer</h2>
+        <p><strong>Company:</strong>tech.info</p>
+        <p><strong>Location:</strong>Remote</p>
+        <p><strong>Description: Leading provider of technology solution. </strong></p>
+        <button onclick="alert('Redirect to application page!')">Apply Now</button>
+        </li>
+
+</ul>
+        </section>
+        <pre><h1>                                   Account Management              </h1></pre>
+
+    
+    <form id="loginForm">
+        <h2>Login</h2>
+        <div>
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" name="email" required>
+        </div>
+        <div>
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <form id="registerForm">
+        <h2>Register</h2>
+        <div>
+            <label for="registerName">Full Name</label>
+            <input type="text" id="registerName" name="name" required>
+        </div>
+        <div>
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" name="email" required>
+        </div>
+        <div>
+            <label for="registerPassword">Password</label>
+            <input type="password" id="registerPassword" name="password" required>
+
+            </div>
+        <form id="jobPostingForm">
+            <div>
+                <label for="jobTitle">Job Title</label>
+                <input type="text" id="jobTitle" name="title" required>
+            </div>
+            <div>
+                <label for="jobDescription">Job Description</label>
+                <textarea id="jobDescription" name="description" rows="5" required></textarea>
+            </div>
+            <div>
+                <label for="jobLocation">Location</label>
+                <input type="text" id="jobLocation" name="location" required>
+            </div>
+            <div>
+                <label for="jobSalary">Salary</label>
+                <input type="text" id="jobSalary" name="salary">
+            </div>
+            <button type="submit">Post Job</button>
+        </form>
+            <form id="profileForm">
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" rows="4" placeholder="Write a short bio about yourself..."></textarea>
+                </div>
+                <div>
+                    <label for="resume">Upload Resume</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <button type="submit">Save Profile</button>
+    </form>
+
+   
+    <form id="jobApplicationForm">
+        <div>
+            <label for="jobTitle">Job Title</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="Enter the job title you are applying for" required>
+        </div>
+        <div>
+            <label for="applicantName">Your Full Name</label>
+            <input type="text" id="applicantName" name="applicantName" required>
+        </div>
+        <div>
+            <label for="applicantEmail">Email</label>
+            <input type="email" id="applicantEmail" name="applicantEmail" required>
+        </div>
+        <div>
+            <label for="coverLetter">Cover Letter</label>
+            <textarea id="coverLetter" name="coverLetter" rows="5" placeholder="Write your cover letter here..." required></textarea>
+        </div>
+        <div>
+            <label for="resumeUpload">Upload Resume</label>
+            <input type="file" id="resumeUpload" name="resume" accept=".pdf,.doc,.docx" required>
+        </div>
+        <button type="submit">Submit Application</button>
+    </form>
+
+
+
+        
+    </main>
+</body>
+</html>
